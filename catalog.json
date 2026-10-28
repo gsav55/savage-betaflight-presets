@@ -1865,6 +1865,9 @@
         "current_meter",
         "d_max_advance",
         "d_max_gain",
+        "d_max_pitch",
+        "d_max_roll",
+        "d_max_yaw",
         "d_pitch",
         "d_roll",
         "d_yaw",
@@ -2294,6 +2297,7 @@
         "servo_lowpass_hz",
         "servo_pwm_rate",
         "simplified_d_gain",
+        "simplified_d_max_gain",
         "simplified_dterm_filter",
         "simplified_dterm_filter_multiplier",
         "simplified_feedforward_gain",
@@ -2406,7 +2410,7 @@
         "yaw_spin_threshold",
         "yaw_srate"
       ],
-      "qualification": "Vendor build: conservative shared schema; bench verification required"
+      "qualification": "Vendor build: conservative shared schema plus d_max fields evidenced in Lazarus CLI backups; native tune requires exact-build verification"
     },
     "2025.12": {
       "reference_tag": "2025.12.4",

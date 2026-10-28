@@ -147,4 +147,24 @@ emit('rates/three_profiles.txt','Three rate profiles - Standard, Race, Tuning',V
       'Choose the active profile in the exclusive checkbox group. Standard is selected by default and is also the fallback if none is checked.',
       'Throttle curves, rate limits, PID profiles and filters are preserved.'],body)
 
+tunes = json.loads((ROOT/'tunes.json').read_text())
+for tune in tunes['items']:
+    body = ['# Global gyro, dynamic-notch and RPM filters affect every PID profile.']
+    body += setlines(tune['filters'])
+    body += ['# Apply to the currently selected PID profile; do not switch PID or rate profiles.']
+    body += setlines(tune['profile'])
+    if tune['optional_rc_smoothing']:
+        body += option('Restore saved RC smoothing (check receiver packet-rate suitability)', setlines(tune['optional_rc_smoothing']))
+    emit(f'{tune["version"]}/tune_{tune["id"]}.txt',tune['title']+' - PID and filters',
+         [tune['version']],'TUNE',
+         [f'Source: {tune["source"]}, PID profile {tune["source_profile"]+1}, firmware {tune["source_firmware"]}.',
+          tune['note'],
+          'Applies the saved tune to the currently selected PID profile. Includes explicit baseline tune/filter values before the backup overrides, so values omitted by diff do not inherit an unrelated tune.',
+          'Gyro, dynamic-notch and RPM filtering are global and affect all PID profiles; D-term filtering follows the selected PID profile.',
+          'Requires working bidirectional DShot RPM telemetry, the correct motor pole count, and the source build/loop configuration. Motor protocol, pole count, idle percentage and PID loop divisor are preserved.',
+          'Rates, modes, OSD, board alignment, motor mapping, receiver protocol and profile selection are preserved. RC smoothing is optional and unchecked.',
+          'No simplified_tuning apply is run: recorded gains and slider values are restored without recalculating the tune.',
+          'Tordle 2S and Tordl3 3S remain separate because their native firmware uses different D-term semantics; there is no unverified cross-version battery selector.' if tune['id'].startswith('tordle_') else 'Use the firmware-specific entry; these tunes are not advertised as tested cross-version conversions.'],
+         body, 'Use only on the matching build with RPM telemetry verified. Back up first, check settings with props removed, and check motor temperature after a short cautious test. These are recovered personal tunes, not hardware-validated universal tunes.')
+
 print('Generated',len(list((ROOT/'presets').rglob('*.txt'))),'presets')

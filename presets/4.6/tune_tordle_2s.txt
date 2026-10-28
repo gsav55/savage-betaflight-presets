@@ -1,0 +1,161 @@
+#$ TITLE: Savage - Tordle 2S Savage - PID and filters
+#$ FIRMWARE_VERSION: 4.6
+#$ CATEGORY: TUNE
+#$ STATUS: EXPERIMENTAL
+#$ AUTHOR: gsav55
+#$ KEYWORDS: Savage, personal, setup
+#$ FORCE_OPTIONS_REVIEW: true
+#$ DESCRIPTION: Source: Lazarus/tuning/SAVAGE TUNE.txt, PID profile 1, firmware 4.6.0 vendor.
+#$ DESCRIPTION: Owner confirmed Lazarus = 2S. Vendor firmware, May 12 2025, norevision, MSP 1.47; no cross-version conversion.
+#$ DESCRIPTION: Applies the saved tune to the currently selected PID profile. Includes explicit baseline tune/filter values before the backup overrides, so values omitted by diff do not inherit an unrelated tune.
+#$ DESCRIPTION: Gyro, dynamic-notch and RPM filtering are global and affect all PID profiles; D-term filtering follows the selected PID profile.
+#$ DESCRIPTION: Requires working bidirectional DShot RPM telemetry, the correct motor pole count, and the source build/loop configuration. Motor protocol, pole count, idle percentage and PID loop divisor are preserved.
+#$ DESCRIPTION: Rates, modes, OSD, board alignment, motor mapping, receiver protocol and profile selection are preserved. RC smoothing is optional and unchecked.
+#$ DESCRIPTION: No simplified_tuning apply is run: recorded gains and slider values are restored without recalculating the tune.
+#$ DESCRIPTION: Tordle 2S and Tordl3 3S remain separate because their native firmware uses different D-term semantics; there is no unverified cross-version battery selector.
+#$ WARNING: Use only on the matching build with RPM telemetry verified. Back up first, check settings with props removed, and check motor temperature after a short cautious test. These are recovered personal tunes, not hardware-validated universal tunes.
+
+# Global gyro, dynamic-notch and RPM filters affect every PID profile.
+set gyro_hardware_lpf = NORMAL
+set gyro_lpf1_type = PT1
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_type = BIQUAD
+set gyro_lpf2_static_hz = 450
+set gyro_notch1_hz = 0
+set gyro_notch1_cutoff = 0
+set gyro_notch2_hz = 0
+set gyro_notch2_cutoff = 0
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set gyro_lpf1_dyn_expo = 5
+set gyro_filter_debug_axis = ROLL
+set acc_lpf_hz = 25
+set simplified_gyro_filter = ON
+set simplified_gyro_filter_multiplier = 90
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 600
+set rpm_filter_harmonics = 3
+set rpm_filter_min_hz = 100
+set rpm_filter_fade_range_hz = 50
+set rpm_filter_q = 500
+set rpm_filter_lpf_hz = 150
+set rpm_filter_weights = 100,100,100
+# Apply to the currently selected PID profile; do not switch PID or rate profiles.
+set pid_at_min_throttle = ON
+set anti_gravity_gain = 80
+set anti_gravity_cutoff_hz = 5
+set anti_gravity_p_gain = 100
+set acc_limit_yaw = 0
+set acc_limit = 0
+set crash_dthreshold = 50
+set crash_gthreshold = 400
+set crash_setpoint_threshold = 350
+set crash_time = 500
+set crash_delay = 0
+set crash_recovery_angle = 10
+set crash_recovery_rate = 100
+set crash_limit_yaw = 200
+set crash_recovery = OFF
+set iterm_rotation = OFF
+set iterm_relax = RP
+set iterm_relax_type = SETPOINT
+set iterm_relax_cutoff = 15
+set iterm_windup = 80
+set pidsum_limit = 500
+set pidsum_limit_yaw = 400
+set throttle_boost = 5
+set throttle_boost_cutoff = 15
+set acro_trainer_angle_limit = 20
+set acro_trainer_lookahead_ms = 50
+set acro_trainer_debug_axis = ROLL
+set acro_trainer_gain = 75
+set p_pitch = 47
+set i_pitch = 63
+set d_pitch = 32
+set f_pitch = 62
+set p_roll = 45
+set i_roll = 60
+set d_roll = 28
+set f_roll = 60
+set p_yaw = 45
+set i_yaw = 60
+set d_yaw = 0
+set f_yaw = 60
+set angle_p_gain = 30
+set angle_feedforward = 50
+set angle_feedforward_smoothing_ms = 80
+set angle_limit = 60
+set angle_earth_ref = 100
+set horizon_level_strength = 75
+set horizon_limit_sticks = 75
+set horizon_limit_degrees = 135
+set horizon_ignore_sticks = OFF
+set horizon_delay_ms = 500
+set abs_control_gain = 0
+set abs_control_limit = 90
+set abs_control_error_limit = 20
+set abs_control_cutoff = 11
+set use_integrated_yaw = OFF
+set integrated_yaw_relax = 200
+set d_max_roll = 31
+set d_max_pitch = 35
+set d_max_yaw = 0
+set d_max_gain = 37
+set d_max_advance = 20
+set thrust_linear = 30
+set transient_throttle_limit = 0
+set feedforward_transition = 0
+set vbat_sag_compensation = 100
+set level_race_mode = OFF
+set launch_control_mode = PITCHONLY
+set launch_trigger_allow_reset = ON
+set launch_trigger_throttle_percent = 20
+set launch_angle_limit = 0
+set launch_control_gain = 40
+set feedforward_max_rate_limit = 90
+set dyn_idle_min_rpm = 25
+set dyn_idle_p_gain = 50
+set dyn_idle_i_gain = 50
+set dyn_idle_d_gain = 50
+set dyn_idle_max_increase = 150
+set simplified_pids_mode = RPY
+set simplified_master_multiplier = 100
+set simplified_i_gain = 75
+set simplified_d_gain = 95
+set simplified_pi_gain = 100
+set simplified_d_max_gain = 30
+set simplified_feedforward_gain = 50
+set simplified_pitch_d_gain = 100
+set simplified_pitch_pi_gain = 100
+set tpa_mode = D
+set tpa_rate = 65
+set tpa_breakpoint = 1350
+set tpa_low_rate = 20
+set tpa_low_breakpoint = 1050
+set tpa_low_always = OFF
+set ez_landing_threshold = 25
+set ez_landing_limit = 15
+set ez_landing_speed = 50
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
+set dterm_lpf1_dyn_min_hz = 75
+set dterm_lpf1_dyn_max_hz = 150
+set dterm_lpf1_dyn_expo = 5
+set dterm_lpf1_type = PT1
+set dterm_lpf1_static_hz = 0
+set dterm_lpf2_type = PT1
+set dterm_lpf2_static_hz = 150
+set dterm_notch_hz = 300
+set dterm_notch_cutoff = 200
+set yaw_lowpass_hz = 100
+set simplified_dterm_filter = ON
+set simplified_dterm_filter_multiplier = 100
+set profile_name = SAVAGE
+#$ OPTION BEGIN (UNCHECKED): Restore saved RC smoothing (check receiver packet-rate suitability)
+    set rc_smoothing_auto_factor = 25
+    set rc_smoothing_auto_factor_throttle = 25
+#$ OPTION END

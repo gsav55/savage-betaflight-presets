@@ -28,7 +28,7 @@ The server binds only to this computer's loopback address. It serves `index.json
 
 ## Included presets
 
-There are **26 presets**: 10 modes/failsafe presets, 15 OSD presets, and one preset that installs three rate profiles. No PID, filter, motor, board alignment, resource, UART, receiver protocol, or VTX power configuration is applied.
+There are **31 presets**: 10 modes/failsafe presets, 15 OSD presets, one preset that installs three rate profiles, and five native-firmware tune/filter entries. Modes, OSD and rates presets preserve PID/filter settings. The tune entries intentionally restore PID and filter settings; motor protocol, board alignment, resources, UARTs, receiver protocol and VTX power remain untouched.
 
 | Type | Choices |
 | --- | --- |
@@ -40,6 +40,7 @@ There are **26 presets**: 10 modes/failsafe presets, 15 OSD presets, and one pre
 | GPS display selection | Non-GPS selected by default; choose GPS-equipped drone to show satellites and checked details |
 | Other OSD options | Imperial units; current and mAh display for a calibrated current sensor |
 | Other mode options | Rate-profile selection on AUX4; UBLOX WAAS/Galileo; allow arming without GPS fix |
+| Custom tunes + filters | Twiggy, Air65 Savage (original and AIR65 C filters), Tordle 2S, Tordl3 3S |
 
 GPS display and flight GPS are separate presets. Choosing GPS in OSD changes only overlays. Apply the GPS modes/failsafe preset separately when appropriate. For a non-GPS drone, GPS fields remain hidden even though the More GPS details checkbox starts checked. Choosing GPS and unchecking More GPS details shows satellites only. OSD presets replace the shared layout fields and normalize visibility across all three OSD profiles; active profile becomes 1. They preserve alarm thresholds and units unless you select Imperial units.
 
@@ -82,6 +83,24 @@ Tuning was recovered from `SB405-AIO/tuning/SAVAGE_TUNE.txt`. The preset writes 
 
 Choose the active profile using the mutually exclusive **Active rate profile after applying** checkboxes. Profile 1 is checked by default. If you clear every checkbox, the preset still finishes on profile 1. This choice changes only the final active profile; all three rate sets are always installed. Transmitter adjustments can subsequently change the active profile if rate-profile switching is configured.
 
+## Custom tunes and filters
+
+Select the intended **PID profile** in Betaflight before applying a tune. These presets change that profile's PIDs, D-term filtering and tune controls, plus the **global gyro/dynamic-notch/RPM filters** shared by every profile. They do not switch PID or rate profiles, or alter the three saved rate sets. Each tune requires working bidirectional DShot RPM telemetry, correct motor-pole configuration, and the original build/loop setup. They preserve motor protocol, idle percentage, motor pole count and PID loop divisor. Saved RC smoothing is an optional unchecked checkbox when present in the source.
+
+| Preset | Native firmware | Source |
+| --- | --- | --- |
+| Twiggy Savage | 4.5 (saved on 4.5.5) | `SB405-AIO/tuning/SAVAGE_TUNE.txt`, profile 1 |
+| Air65 Savage | 4.5 (saved on 4.5.0) | `A65/SavageTune.txt`, profile 3 named Savage |
+| Air65 Savage - AIR65 C filters | 2026.6 alpha | `A652C/SAVAGE_BTFL_cli_backup_AIR65_C_20260928_202051_BETAFPVG473_V2.txt`, profile 3 |
+| Tordle 2S Savage | Vendor 4.6.0 | `Lazarus/tuning/SAVAGE TUNE.txt`, profile 1 |
+| Tordl3 3S Savage | 4.5.0 | `crazy-f405/SavageTune.txt`, profile 1 |
+
+The owner confirmed **Lazarus = 2S** and **Tordl3 = 3S**. Those saves use different D-term semantics: 4.5 stores upper D in `d_roll`/`d_pitch` and lower D in `d_min_*`; the vendor 4.6 save stores base D plus `d_max_*`. They are separate native-version presets, rather than an unverified 2S/3S conversion checkbox. Other firmware generations are deliberately not claimed as tune-compatible merely because a setting name exists.
+
+The AIR65 C entry preserves the later backup's own global filters and native D-max settings; its main Savage P/I/D/F values match the original Air65. All entries fill omitted diff values from documented reference defaults, then preserve the source overrides. This explicitly restores such things as zero yaw D, D-min/D-max, feedforward, TPA and filter types instead of inheriting an unrelated tune. No `simplified_tuning apply` is issued, so recorded gains are not recalculated from slider settings. The vendor 4.6 source revision and exact factory defaults are unavailable: its omitted values use the documented 2025.12 reference and remain experimental, requiring verification on the original build.
+
+See [tune recovery notes and other candidates](docs/tunes.md) and [portable tune data](tunes.json). Back up the FC, verify RPM telemetry and settings with props removed, then perform a short cautious test and check motor temperatures. No tune was applied to hardware during recovery.
+
 ## Compatibility and provenance
 
 See [review notes](docs/review.md), [complete backup inventory](docs/backup-inventory.json), and [portable source catalog](catalog.json). The catalog contains only selected setting excerpts and command-name compatibility snapshots, not complete FC dumps, receiver identifiers, radio models, or flight logs. Original backups remain untouched outside this repository.
@@ -98,7 +117,7 @@ Version labels match Betaflight's preset filters by firmware generation, rather 
 
 ## Maintain
 
-Edit `catalog.json` for the reviewed source values or `scripts/build.py` for structure, then run:
+Edit `catalog.json` for modes/OSD/rates, `tunes.json` for the recovered tune/filter values, or `scripts/build.py` for structure, then run:
 
 ```sh
 npm run build

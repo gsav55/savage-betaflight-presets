@@ -8,6 +8,15 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 CAT=json.loads((ROOT/'catalog.json').read_text())
+TUNES=json.loads((ROOT/'tunes.json').read_text())['items']
+# Independently reviewed core roll/pitch values from the selected final backups.
+TUNE_GAINS={
+    'twiggy': [(63,95,54,125),(65,99,62,131)],
+    'air65': [(76,108,50,153),(79,114,57,159)],
+    'air65_c': [(76,108,50,153),(79,114,57,159)],
+    'tordle_2s': [(45,60,28,60),(47,63,32,62)],
+    'tordle_3s': [(45,80,40,120),(56,100,55,149)],
+}
 GPS=['gps_sats','gps_speed','home_dir','home_dist','gps_lat','gps_lon','compass_bar','altitude','flight_dist']
 
 def options(text):
@@ -39,8 +48,34 @@ for p in sorted((ROOT/'presets').rglob('*.txt')):
         allowed=set(CAT['schemas'][version]['settings'])
         for key,value in re.findall(r'^\s*set (\w+) = (.+)$',text,re.M):
             assert key in allowed,(p,version,'unknown setting',key)
-            assert not re.match(r'(?:p_|i_|d_|f_|gyro_|dterm_|dyn_notch_|rpm_filter|simplified_|feedforward|tpa_|motor_)',key),(p,key)
-    if '/osd_' in str(p):
+            if not p.stem.startswith('tune_'):
+                assert not re.match(r'(?:p_|i_|d_|f_|gyro_|dterm_|dyn_notch_|rpm_filter|simplified_|feedforward|tpa_|motor_)',key),(p,key)
+    if p.stem.startswith('tune_'):
+        tune=next(t for t in TUNES if p.stem=='tune_'+t['id'])
+        assert versions==[tune['version']],p
+        assert '#$ CATEGORY: TUNE' in text and '#$ WARNING:' in text,p
+        assert not re.search(r'^\s*(?:profile|rateprofile|defaults|save|feature|aux|serial|resource|simplified_tuning)\b',text,re.M),p
+        expected=tune['filters']|tune['profile']
+        for enabled in ([False,True] if names else [False]):
+            checked=set(names) if enabled else set()
+            lines=payload(text,checked);s=state(lines);count+=1
+            assert s==(expected|(tune['optional_rc_smoothing'] if enabled else {})),(p,'tune payload mismatch')
+            for k in s:
+                assert not k.startswith(('osd_','gps_','failsafe_','motor_','dshot_','vbat_','align_','gyro_1_','gyro_2_')) or k=='vbat_sag_compensation',(p,k)
+                assert k not in ['auto_profile_cell_count','pid_process_denom','craft_name','roll_rc_rate','roll_expo','roll_srate'],(p,k)
+            for k,v in tune['source_profile_overrides'].items():assert s[k]==v,(p,k,'profile source lost')
+            for k,v in tune['source_filter_overrides'].items():assert s[k]==v,(p,k,'filter source lost')
+            for axis in ['roll','pitch','yaw']:
+                for gain in ['p','i','d','f']:assert f'{gain}_{axis}' in s,(p,'incomplete PID gains')
+            for axis,gains in zip(['roll','pitch'],TUNE_GAINS[tune['id']]):
+                assert tuple(int(s[f'{g}_{axis}']) for g in ['p','i','d','f'])==gains,(p,axis,'reviewed gains differ')
+            for k in ['dyn_notch_q','dyn_notch_min_hz','dyn_notch_max_hz','rpm_filter_harmonics','rpm_filter_min_hz','gyro_lpf2_type','dterm_lpf1_type','dterm_lpf1_dyn_min_hz','dterm_lpf2_static_hz']:
+                assert k in s,(p,'incomplete filters',k)
+        assert not any(checked for name,checked in options(text)),p
+        assert len(names)==bool(tune['optional_rc_smoothing']),p
+        if tune['version']=='4.5':assert 'd_min_roll' in expected and 'd_max_roll' not in expected,p
+        else:assert 'd_max_roll' in expected and 'd_min_roll' not in expected,p
+    elif '/osd_' in str(p):
         gpslabel='GPS-equipped drone';nongps='Non-GPS drone'
         optional=[name for name,default in options(text) if name not in [gpslabel,nongps]]
         for gps in [False,True]:
@@ -112,4 +147,4 @@ for p in sorted((ROOT/'presets').rglob('*.txt')):
 
 index=(ROOT/'index.json').read_bytes()
 assert hashlib.sha256(index).hexdigest()==(ROOT/'index_hash.txt').read_text().strip(),'Index hash stale'
-print(f'PASS: {len(list((ROOT/"presets").rglob("*.txt")))} presets; {count} option combinations; version schemas, GPS isolation, OSD bounds, mode replacement and PID/filter exclusions.')
+print(f'PASS: {len(list((ROOT/"presets").rglob("*.txt")))} presets; {count} option combinations; version schemas, GPS isolation, OSD bounds, modes, rate profiles and source-faithful native tunes with scope isolation.')

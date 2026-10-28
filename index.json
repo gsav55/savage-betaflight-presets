@@ -143,7 +143,8 @@
     "category": [
       "OSD",
       "OTHER",
-      "RATES"
+      "RATES",
+      "TUNE"
     ],
     "author": [
       "gsav55"
@@ -336,6 +337,24 @@
       "priority": 0
     },
     {
+      "fullPath": "presets/2026.6/tune_air65_c.txt",
+      "hash": "f44eece45bd8613b6987fdd177204381f39671b450295567ce0de9b7c6e3ab20",
+      "title": "Savage - Air65 Savage - AIR65 C filters - PID and filters",
+      "firmware_version": [
+        "2026.6"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/4.4/modes_gps.txt",
       "hash": "24a404a1c5b9c940ad1e760f01a2052ec484591377760a7b7b56b680ef361227",
       "title": "Savage - GPS rescue and modes (4.4)",
@@ -516,6 +535,60 @@
       "priority": 0
     },
     {
+      "fullPath": "presets/4.5/tune_air65.txt",
+      "hash": "3257331d40e86fc0c9d66f155837fa4fbf74df1b6f02dff13e54af811d321c0e",
+      "title": "Savage - Air65 Savage - PID and filters",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/4.5/tune_tordle_3s.txt",
+      "hash": "aba35759deb834a793ca99695701f51af160a518f9431f540482de6f5757401f",
+      "title": "Savage - Tordl3 3S Savage - PID and filters",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/4.5/tune_twiggy.txt",
+      "hash": "1f5d70b55d55223f8a42acb1756d72feb7fdeb25ab89ce713b4fa5d47bbf6491",
+      "title": "Savage - Twiggy Savage - PID and filters",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/4.6/modes_gps.txt",
       "hash": "6d30a7baea0ed90c7fb09a656b3d7ac303314ee8426ba2e99cc9596adcdebdb4",
       "title": "Savage - GPS rescue and modes (4.6)",
@@ -604,6 +677,24 @@
       ],
       "force_options_review": true,
       "priority": 0
+    },
+    {
+      "fullPath": "presets/4.6/tune_tordle_2s.txt",
+      "hash": "eccc2d53636cd32ab7a2c5627fe7348db40f8819867a877eb6a2c06fb0c08594",
+      "title": "Savage - Tordle 2S Savage - PID and filters",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 1000000000000
     },
     {
       "fullPath": "presets/rates/three_profiles.txt",
