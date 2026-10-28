@@ -128,11 +128,23 @@ for version in VERSIONS:
               'More details includes home direction/distance, speed, altitude and coordinates; PDOP is unavailable in 4.4.',
               'No signal-strength alarm threshold is copied because it depends on the receiver packet rate.'],body)
 
-for item in CAT['rates']:
-    body = ['# Applies to the currently selected rate profile; no profile index is changed.','set rates_type = ACTUAL']+setlines(item['settings'])
-    body += option('Set rate-profile name', ['set rateprofile_name = '+item['name']])
-    emit('rates/'+item['id']+'.txt',item['title'],VERSIONS,'RATES',
-         ['Applies explicit Actual center sensitivity, maximum rate and expo to the current rate profile.',
-          'Source: '+item['source'], 'Throttle curve, rate limits, PID profiles and filters are preserved.'],body)
+# This directory is generated: retire the former individual rate presets.
+for old in (ROOT/'presets'/'rates').glob('*.txt'):
+    old.unlink()
+body = ['# Install profiles 1-3 (zero-based CLI indices 0-2).']
+for slot,item in enumerate(CAT['rates']):
+    body += [f'rateprofile {slot}', 'set rates_type = ACTUAL',
+             'set rateprofile_name = '+item['name']] + setlines(item['settings'])
+body += ['# Safe fallback if all final-profile checkboxes are cleared.', 'rateprofile 0']
+body += group('Active rate profile after applying - choose one',
+              [option(f'Finish on profile {i+1}: {item["name"]}', [f'rateprofile {i}'], i==0)
+               for i,item in enumerate(CAT['rates'])])
+emit('rates/three_profiles.txt','Three rate profiles - Standard, Race, Tuning',VERSIONS,'RATES',
+     ['Writes rate profiles 1, 2 and 3 in this order: Standard, Race, Tuning. Profile 4 is preserved.',
+      'Standard: Actual 60 center, 540 maximum, 0.20 expo on all axes.',
+      'Race: roll/pitch 60 center, 540 maximum, 0.20 expo; yaw 120 center, 730 maximum, 0.20 expo.',
+      'Tuning: Actual 150 center, 150 maximum, zero expo on all axes, recovered from SB405-AIO/tuning/SAVAGE_TUNE.txt.',
+      'Choose the active profile in the exclusive checkbox group. Standard is selected by default and is also the fallback if none is checked.',
+      'Throttle curves, rate limits, PID profiles and filters are preserved.'],body)
 
 print('Generated',len(list((ROOT/'presets').rglob('*.txt'))),'presets')

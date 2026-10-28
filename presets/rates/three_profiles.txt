@@ -1,0 +1,68 @@
+#$ TITLE: Savage - Three rate profiles - Standard, Race, Tuning
+#$ FIRMWARE_VERSION: 4.4
+#$ FIRMWARE_VERSION: 4.5
+#$ FIRMWARE_VERSION: 4.6
+#$ FIRMWARE_VERSION: 2025.12
+#$ FIRMWARE_VERSION: 2026.6
+#$ CATEGORY: RATES
+#$ STATUS: EXPERIMENTAL
+#$ AUTHOR: gsav55
+#$ KEYWORDS: Savage, personal, setup
+#$ FORCE_OPTIONS_REVIEW: true
+#$ DESCRIPTION: Writes rate profiles 1, 2 and 3 in this order: Standard, Race, Tuning. Profile 4 is preserved.
+#$ DESCRIPTION: Standard: Actual 60 center, 540 maximum, 0.20 expo on all axes.
+#$ DESCRIPTION: Race: roll/pitch 60 center, 540 maximum, 0.20 expo; yaw 120 center, 730 maximum, 0.20 expo.
+#$ DESCRIPTION: Tuning: Actual 150 center, 150 maximum, zero expo on all axes, recovered from SB405-AIO/tuning/SAVAGE_TUNE.txt.
+#$ DESCRIPTION: Choose the active profile in the exclusive checkbox group. Standard is selected by default and is also the fallback if none is checked.
+#$ DESCRIPTION: Throttle curves, rate limits, PID profiles and filters are preserved.
+
+# Install profiles 1-3 (zero-based CLI indices 0-2).
+rateprofile 0
+set rates_type = ACTUAL
+set rateprofile_name = 60|54|20
+set roll_rc_rate = 6
+set roll_srate = 54
+set roll_expo = 20
+set pitch_rc_rate = 6
+set pitch_srate = 54
+set pitch_expo = 20
+set yaw_rc_rate = 6
+set yaw_srate = 54
+set yaw_expo = 20
+rateprofile 1
+set rates_type = ACTUAL
+set rateprofile_name = Race
+set roll_rc_rate = 6
+set roll_srate = 54
+set roll_expo = 20
+set pitch_rc_rate = 6
+set pitch_srate = 54
+set pitch_expo = 20
+set yaw_rc_rate = 12
+set yaw_srate = 73
+set yaw_expo = 20
+rateprofile 2
+set rates_type = ACTUAL
+set rateprofile_name = Tuning
+set roll_rc_rate = 15
+set roll_srate = 15
+set roll_expo = 0
+set pitch_rc_rate = 15
+set pitch_srate = 15
+set pitch_expo = 0
+set yaw_rc_rate = 15
+set yaw_srate = 15
+set yaw_expo = 0
+# Safe fallback if all final-profile checkboxes are cleared.
+rateprofile 0
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Active rate profile after applying - choose one
+    #$ OPTION BEGIN (CHECKED): Finish on profile 1: 60|54|20
+        rateprofile 0
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): Finish on profile 2: Race
+        rateprofile 1
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): Finish on profile 3: Tuning
+        rateprofile 2
+    #$ OPTION END
+#$ OPTION_GROUP END

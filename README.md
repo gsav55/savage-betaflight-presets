@@ -28,7 +28,7 @@ The server binds only to this computer's loopback address. It serves `index.json
 
 ## Included presets
 
-There are **35 presets**: 10 modes/failsafe presets, 15 OSD presets, and 10 rates presets. No PID, filter, motor, board alignment, resource, UART, receiver protocol, or VTX power configuration is applied.
+There are **26 presets**: 10 modes/failsafe presets, 15 OSD presets, and one preset that installs three rate profiles. No PID, filter, motor, board alignment, resource, UART, receiver protocol, or VTX power configuration is applied.
 
 | Type | Choices |
 | --- | --- |
@@ -70,20 +70,17 @@ Modes 3 and 11 are omitted from 4.4, 4.5 and vendor 4.6 presets because they wer
 
 ## Rates
 
-Every rates preset explicitly selects **ACTUAL** and writes all nine axis values into the **currently selected rate profile**. It does not select or overwrite other profile slots. Profile naming is an optional unchecked checkbox. Throttle curve and rate limits are preserved. Center and maximum values below are degrees/second; expo is percent. Each tuple is **roll / pitch / yaw**.
+The **Three rate profiles - Standard, Race, Tuning** preset installs these Actual rates in order. Betaflight displays profiles 1–3; CLI indices are 0–2. Each tuple below is **roll / pitch / yaw**. Center sensitivity and maximum rate are degrees/second; expo 0.20 is stored as CLI `20`.
 
-| Preset | Center sensitivity | Maximum rate | Expo |
-| --- | --- | --- | --- |
-| Latest Halo | 60 / 60 / 60 | 550 / 550 / 550 | 20 / 20 / 20 |
-| Everyday | 60 / 60 / 60 | 540 / 540 / 540 | 20 / 20 / 20 |
-| HDZero whoop | 60 / 60 / 60 | 540 / 540 / 540 | 20 / 20 / 3 |
-| AOS 5 freestyle | 130 / 130 / 180 | 700 / 700 / 800 | 65 / 65 / 45 |
-| AOS 5 smooth | 100 / 100 / 140 | 700 / 700 / 800 | 72 / 72 / 60 |
-| AOS 4 main | 200 / 200 / 350 | 720 / 720 / 960 | 57 / 57 / 3 |
-| AOS 4 soft | 200 / 200 / 200 | 530 / 530 / 530 | 50 / 50 / 50 |
-| M8 freestyle | 200 / 200 / 500 | 900 / 900 / 1200 | 25 / 25 / 3 |
-| M8 fast | 200 / 200 / 450 | 1100 / 1100 / 1400 | 54 / 54 / 5 |
-| Tuning sticks | 150 / 150 / 150 | 150 / 150 / 150 | 0 / 0 / 0 |
+| Profile | Name | Center sensitivity | Maximum rate | Expo |
+| --- | --- | --- | --- | --- |
+| 1 | 60\|54\|20 | 60 / 60 / 60 | 540 / 540 / 540 | 0.20 / 0.20 / 0.20 |
+| 2 | Race | 60 / 60 / 120 | 540 / 540 / 730 | 0.20 / 0.20 / 0.20 |
+| 3 | Tuning | 150 / 150 / 150 | 150 / 150 / 150 | 0 / 0 / 0 |
+
+Tuning was recovered from `SB405-AIO/tuning/SAVAGE_TUNE.txt`. The preset writes Actual rate type, profile name and all nine axis values in each of the first three slots. Profile 4, throttle curves, rate limits, PID profiles and filters are preserved.
+
+Choose the active profile using the mutually exclusive **Active rate profile after applying** checkboxes. Profile 1 is checked by default. If you clear every checkbox, the preset still finishes on profile 1. This choice changes only the final active profile; all three rate sets are always installed. Transmitter adjustments can subsequently change the active profile if rate-profile switching is configured.
 
 ## Compatibility and provenance
 

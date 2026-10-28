@@ -363,26 +363,9 @@
   },
   "rates": [
     {
-      "id": "halo_550",
-      "title": "Latest Halo - 60 / 550 / 20",
-      "source": "HD0Halo/AOS7_SAVAGE.txt (rateprofile 0)",
-      "name": "60|55|20",
-      "settings": {
-        "roll_rc_rate": "6",
-        "roll_srate": "55",
-        "roll_expo": "20",
-        "pitch_rc_rate": "6",
-        "pitch_srate": "55",
-        "pitch_expo": "20",
-        "yaw_rc_rate": "6",
-        "yaw_srate": "55",
-        "yaw_expo": "20"
-      }
-    },
-    {
       "id": "everyday_540",
-      "title": "Everyday - 60 / 540 / 20",
-      "source": "A65Race2/Setup.txt (rateprofile 0)",
+      "title": "Standard - 60 / 540 / 0.20",
+      "source": "Owner specification; matches A65Race2/Setup.txt (rateprofile 0)",
       "name": "60|54|20",
       "settings": {
         "roll_rc_rate": "6",
@@ -397,10 +380,10 @@
       }
     },
     {
-      "id": "hdzero_yaw3",
-      "title": "HDZero whoop - 60 / 540 / yaw expo 3",
-      "source": "Lazarus/tuning/SAVAGE TUNE.txt (rateprofile 0)",
-      "name": "60|54|20",
+      "id": "race",
+      "title": "Race",
+      "source": "Owner specification: standard roll/pitch, yaw 120 / 730 / 0.20",
+      "name": "Race",
       "settings": {
         "roll_rc_rate": "6",
         "roll_srate": "54",
@@ -408,111 +391,9 @@
         "pitch_rc_rate": "6",
         "pitch_srate": "54",
         "pitch_expo": "20",
-        "yaw_rc_rate": "6",
-        "yaw_srate": "54",
-        "yaw_expo": "3"
-      }
-    },
-    {
-      "id": "aos5_freestyle",
-      "title": "AOS 5 - 130 / 700 / 65",
-      "source": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260623_234912_SPEEDYBEEF405V5.txt (rateprofile 0)",
-      "name": "13|70|65",
-      "settings": {
-        "roll_rc_rate": "13",
-        "roll_srate": "70",
-        "roll_expo": "65",
-        "pitch_rc_rate": "13",
-        "pitch_srate": "70",
-        "pitch_expo": "65",
-        "yaw_rc_rate": "18",
-        "yaw_srate": "80",
-        "yaw_expo": "45"
-      }
-    },
-    {
-      "id": "aos5_smooth",
-      "title": "AOS 5 - 100 / 700 / 72",
-      "source": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260623_234912_SPEEDYBEEF405V5.txt (rateprofile 1)",
-      "name": "10|70|72",
-      "settings": {
-        "roll_rc_rate": "10",
-        "roll_srate": "70",
-        "roll_expo": "72",
-        "pitch_rc_rate": "10",
-        "pitch_srate": "70",
-        "pitch_expo": "72",
-        "yaw_rc_rate": "14",
-        "yaw_srate": "80",
-        "yaw_expo": "60"
-      }
-    },
-    {
-      "id": "aos4_main",
-      "title": "AOS 4 - 200 / 720 / 57",
-      "source": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260608_234018_SPEEDYBEEF405MINI.txt (rateprofile 0)",
-      "name": "aos4_mai",
-      "settings": {
-        "roll_rc_rate": "20",
-        "roll_srate": "72",
-        "roll_expo": "57",
-        "pitch_rc_rate": "20",
-        "pitch_srate": "72",
-        "pitch_expo": "57",
-        "yaw_rc_rate": "35",
-        "yaw_srate": "96",
-        "yaw_expo": "3"
-      }
-    },
-    {
-      "id": "aos4_soft",
-      "title": "AOS 4 - 200 / 530 / 50",
-      "source": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260608_234018_SPEEDYBEEF405MINI.txt (rateprofile 1)",
-      "name": "aos4_sof",
-      "settings": {
-        "roll_rc_rate": "20",
-        "roll_srate": "53",
-        "roll_expo": "50",
-        "pitch_rc_rate": "20",
-        "pitch_srate": "53",
-        "pitch_expo": "50",
-        "yaw_rc_rate": "20",
-        "yaw_srate": "53",
-        "yaw_expo": "50"
-      }
-    },
-    {
-      "id": "m8_freestyle",
-      "title": "M8 - 200 / 900 / 25",
-      "source": "M8/BTFL_cli_backup_M8_FS_20260614_194226_HDZERO_AIO15.txt (rateprofile 0)",
-      "name": "m8_frees",
-      "settings": {
-        "roll_rc_rate": "20",
-        "roll_srate": "90",
-        "roll_expo": "25",
-        "pitch_rc_rate": "20",
-        "pitch_srate": "90",
-        "pitch_expo": "25",
-        "yaw_rc_rate": "50",
-        "yaw_srate": "120",
-        "yaw_expo": "3"
-      }
-    },
-    {
-      "id": "m8_fast",
-      "title": "M8 - 200 / 1100 / 54",
-      "source": "M8/BTFL_cli_backup_M8_FS_20260614_194226_HDZERO_AIO15.txt (rateprofile 1)",
-      "name": "m8_fast",
-      "settings": {
-        "roll_rc_rate": "20",
-        "roll_srate": "110",
-        "roll_expo": "54",
-        "pitch_rc_rate": "20",
-        "pitch_srate": "110",
-        "pitch_expo": "54",
-        "yaw_rc_rate": "45",
-        "yaw_srate": "140",
-        "yaw_expo": "5"
+        "yaw_rc_rate": "12",
+        "yaw_srate": "73",
+        "yaw_expo": "20"
       }
     },
     {

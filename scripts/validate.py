@@ -33,7 +33,8 @@ for p in sorted((ROOT/'presets').rglob('*.txt')):
     text=p.read_text();versions=re.findall(r'^#\$ FIRMWARE_VERSION: (.+)$',text,re.M)
     names=[x[0] for x in options(text)]
     assert len(set(names))==len(names),p
-    assert 'defaults nosave' not in text and not re.search(r'^\s*(save|profile|rateprofile)\b',text,re.M),p
+    assert 'defaults nosave' not in text and not re.search(r'^\s*(save|profile)\b',text,re.M),p
+    if p.parent.name!='rates':assert not re.search(r'^\s*rateprofile\b',text,re.M),p
     for version in versions:
         allowed=set(CAT['schemas'][version]['settings'])
         for key,value in re.findall(r'^\s*set (\w+) = (.+)$',text,re.M):
@@ -82,12 +83,32 @@ for p in sorted((ROOT/'presets').rglob('*.txt')):
             if versions[0] in ['4.4','4.5','4.6']:
                 assert not any(v[0] in [3,11] for v in active),p
     else:
-        s=state(payload(text,set()));count+=1
-        assert s['rates_type']=='ACTUAL',p
-        assert len(s)==10,(p,'rates must specify all 9 axis values')
-        for axis in ['roll','pitch','yaw']:
-            assert 0<=int(s[axis+'_expo'])<=100,p
-            for key in ['rc_rate','srate']:assert 0<=int(s[axis+'_'+key])<=200,p
+        assert p.name=='three_profiles.txt' and len(CAT['rates'])==3,p
+        assert len(names)==3 and [n for n,c in options(text) if c]==[names[0]],p
+        # Independently specify the requested values; simulate CLI profile switching.
+        expected=[[(6,54,20)]*3,[(6,54,20),(6,54,20),(12,73,20)],[(15,15,0)]*3]
+        for selected in [None,0,1,2]:
+            profiles=[{'thr_expo':'37','roll_rate_limit':'1900'} for i in range(4)]
+            profiles[3]['sentinel']='unchanged';active=3;written=[set() for i in range(4)]
+            checked=set() if selected is None else {names[selected]}
+            for line in payload(text,checked):
+                m=re.fullmatch(r'rateprofile (\d+)',line)
+                if m:
+                    active=int(m[1]);assert active in [0,1,2],p
+                else:
+                    m=re.fullmatch(r'set (\w+) = (.+)',line);assert m,(p,line)
+                    profiles[active][m[1]]=m[2];written[active].add(m[1])
+            count+=1
+            assert active==(0 if selected is None else selected),(p,'final active profile')
+            assert profiles[3]=={'thr_expo':'37','roll_rate_limit':'1900','sentinel':'unchanged'},p
+            for i,axes in enumerate(expected):
+                s=profiles[i];assert s['rates_type']=='ACTUAL',p
+                assert s['rateprofile_name']==['60|54|20','Race','Tuning'][i],p
+                assert len(written[i])==11,(p,'must write type, name and all 9 axis values')
+                assert s['thr_expo']=='37' and s['roll_rate_limit']=='1900',p
+                for axis,values in zip(['roll','pitch','yaw'],axes):
+                    for key,value in zip(['rc_rate','srate','expo'],values):
+                        assert int(s[axis+'_'+key])==value,(p,i,axis,key)
 
 index=(ROOT/'index.json').read_bytes()
 assert hashlib.sha256(index).hexdigest()==(ROOT/'index_hash.txt').read_text().strip(),'Index hash stale'
