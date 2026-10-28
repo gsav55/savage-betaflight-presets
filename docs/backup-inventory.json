@@ -1,0 +1,839 @@
+[
+  {
+    "path": "M8/BTFL_cli_backup_M8_FS_20260614_194226_HDZERO_AIO15.txt",
+    "version": "4.6.0",
+    "date": "20260614_194226",
+    "lines": 242,
+    "stock": false,
+    "sha256": "f811cc4592ad627e885953eb1d2610f8d32d8018edf8f2a9825b5625e52f8d6f",
+    "header": "# Betaflight / STM32G47X (SG47) 4.6.0 May 12 2025 / 09:54:06 (norevision) MSP API: 1.47"
+  },
+  {
+    "path": "M8/BTFL_cli_backup_M8_FS_20260524_145212_HDZERO_AIO15.txt",
+    "version": "4.6.0",
+    "date": "20260524_145212",
+    "lines": 236,
+    "stock": false,
+    "sha256": "2b1d450e75c08898d70e3f2c74f8729ca58cdb7170b08c0d4e461b88571c560c",
+    "header": "# Betaflight / STM32G47X (SG47) 4.6.0 May 12 2025 / 09:54:06 (norevision) MSP API: 1.47"
+  },
+  {
+    "path": "Lion4/BTFL_cli_backup_M8_FS_20260613_235545_HDZERO_AIO15.txt",
+    "version": "4.6.0",
+    "date": "20260613_235545",
+    "lines": 241,
+    "stock": false,
+    "sha256": "4a4fd3042481ea02ba2d76042de86e41d98641258f8a131630225382230bbabf",
+    "header": "# Betaflight / STM32G47X (SG47) 4.6.0 May 12 2025 / 09:54:06 (norevision) MSP API: 1.47"
+  },
+  {
+    "path": "A652C/SAVAGE_BTFL_cli_backup_AIR65_C_20260928_202051_BETAFPVG473_V2.txt",
+    "version": "2026.6.0",
+    "date": "20260928_202051",
+    "lines": 220,
+    "stock": false,
+    "sha256": "3b45aa8ff79a71fdd955076e83aea56953a9dc0f0474674b052c40eb1256ad1a",
+    "header": "# Betaflight / STM32G47X (G473) 2026.6.0-alpha May 15 2026 / 06:14:55 (e92c10887) MSP API: 1.48"
+  },
+  {
+    "path": "A652C/STOCK-BTFL_cli_backup_AIR65_C_20260928_191812_BETAFPVG473_V2.txt",
+    "version": "2026.6.0",
+    "date": "20260928_191812",
+    "lines": 177,
+    "stock": true,
+    "sha256": "864905d2991b74c820cc32566f44f2850c71b7e6a42c6879e6e9dfb30fc4885f",
+    "header": "# Betaflight / STM32G47X (G473) 2026.6.0-alpha May 15 2026 / 06:14:55 (e92c10887) MSP API: 1.48"
+  },
+  {
+    "path": "Air65/AIR65_Rebuild_20260728.txt",
+    "version": "4.5.0",
+    "date": "20260728",
+    "lines": 279,
+    "stock": false,
+    "sha256": "a5aac58fb0dcd2c49a7aff3c2dd5372467ad9c7991dc9d335f6f9b2a62963858",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "Air65/BTFL_cli_backup_AIR65_FS_20260728_224917_BETAFPVG473.txt",
+    "version": "4.5.0",
+    "date": "20260728_224917",
+    "lines": 279,
+    "stock": false,
+    "sha256": "a5aac58fb0dcd2c49a7aff3c2dd5372467ad9c7991dc9d335f6f9b2a62963858",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "Lazarus/BTFL_cli_backup_M8_FS_20260729_191920_HDZERO_AIO15.txt",
+    "version": "4.6.0",
+    "date": "20260729_191920",
+    "lines": 240,
+    "stock": false,
+    "sha256": "68ae79921d1790f096dc280c83c0b05eff47582ff5a50b33a1fb03c736536a79",
+    "header": "# Betaflight / STM32G47X (SG47) 4.6.0 May 12 2025 / 09:54:06 (norevision) MSP API: 1.47"
+  },
+  {
+    "path": "Lazarus/BTFL_cli_backup_TORDLE_20260730_210750_HDZERO_AIO15.txt",
+    "version": "4.6.0",
+    "date": "20260730_210750",
+    "lines": 241,
+    "stock": false,
+    "sha256": "79cf08bb0510912e619a721dd070fc7b863028a342072b90f7961d4e90ab119a",
+    "header": "# Betaflight / STM32G47X (SG47) 4.6.0 May 12 2025 / 09:54:06 (norevision) MSP API: 1.47"
+  },
+  {
+    "path": "crazy-f405/Initial_Config.txt",
+    "version": "4.5.0",
+    "date": "",
+    "lines": 194,
+    "stock": false,
+    "sha256": "ee161175985b2ef48b7bb3a519ebfacfff3385649fe22886c616235046b20647",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.0 Jul 17 2025 / 05:08:16 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "crazy-f405/PreTune_Config.txt",
+    "version": "4.5.0",
+    "date": "",
+    "lines": 198,
+    "stock": false,
+    "sha256": "1848426a228f0c6854076d2a1442e3f46b1113a9feb3b95a754410b4c7aebdbe",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.0 Jul 17 2025 / 05:08:16 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "crazy-f405/SavageTune.txt",
+    "version": "4.5.0",
+    "date": "",
+    "lines": 198,
+    "stock": false,
+    "sha256": "4270c9b37a7d850c38d62020a165b7706192638d59a68a60c0547bbeee581ea1",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.0 Jul 17 2025 / 05:08:16 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260612_234758_BETAFLIGHTF4.txt",
+    "version": "4.4.3",
+    "date": "20260612_234758",
+    "lines": 45,
+    "stock": false,
+    "sha256": "4ec252e2fa5e7678f8bdf8c8902c156cdb672a1d8e2616fbe8761d9ae8460ccf",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Jun 13 2026 / 01:36:59 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260628_125648_BETAFLIGHTF4.txt",
+    "version": "4.4.3",
+    "date": "20260628_125648",
+    "lines": 45,
+    "stock": false,
+    "sha256": "4ec252e2fa5e7678f8bdf8c8902c156cdb672a1d8e2616fbe8761d9ae8460ccf",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Jun 13 2026 / 01:36:59 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260612_235748_BETAFLIGHTF4.txt",
+    "version": "4.4.3",
+    "date": "20260612_235748",
+    "lines": 45,
+    "stock": false,
+    "sha256": "4ec252e2fa5e7678f8bdf8c8902c156cdb672a1d8e2616fbe8761d9ae8460ccf",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Jun 13 2026 / 01:36:59 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260612_201921_BETAFLIGHTF4.txt",
+    "version": "2025.12.4",
+    "date": "20260612_201921",
+    "lines": 45,
+    "stock": false,
+    "sha256": "0f3768449683a0fd22343346e97ac8199c07810cb78dfa1aa01a429c97569dc8",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 01:15:35 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_CRUX35_20260612_193744_BETAFLIGHTF4.txt",
+    "version": "4.4.3",
+    "date": "20260612_193744",
+    "lines": 221,
+    "stock": false,
+    "sha256": "ac20aa0a16fbaf801b9fae342b64faf5e2d4896bdd1332214f55b732b5309838",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Nov 23 2023 / 05:21:21 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260612_201646_BETAFLIGHTF4.txt",
+    "version": "2025.12.4",
+    "date": "20260612_201646",
+    "lines": 45,
+    "stock": false,
+    "sha256": "9a4d92014a63471a21beb71782d1185ea49221fbfb9e093150814f388acc8b5a",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 01:05:22 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "C35/working.txt",
+    "version": "2025.12.4",
+    "date": "",
+    "lines": 223,
+    "stock": false,
+    "sha256": "e2c9966a1d0f6ea5059cffbfc561f10e1b18a94abd7963cca9f304eb1fb47898",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 28 2026 / 17:56:17 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260612_202820_BETAFLIGHTF4.txt",
+    "version": "2025.12.4",
+    "date": "20260612_202820",
+    "lines": 45,
+    "stock": false,
+    "sha256": "9a4d92014a63471a21beb71782d1185ea49221fbfb9e093150814f388acc8b5a",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 01:05:22 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "C35/Mapped.txt",
+    "version": "2025.12.4",
+    "date": "",
+    "lines": 222,
+    "stock": false,
+    "sha256": "f14fc10c88e914c44edc7e5847cd00a679efe100cb385bd0bbf654c5ae9f78b6",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 28 2026 / 17:56:17 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "C35/BTFL_cli_CRUX35_20260612_193139_BETAFLIGHTF4.txt",
+    "version": "4.4.3",
+    "date": "20260612_193139",
+    "lines": 221,
+    "stock": false,
+    "sha256": "7343785d4abb083b6d2ab20daae33f29673889d20a97cc11b866c69c3d0e7de5",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Nov 23 2023 / 05:21:21 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_CRUX35_20260524_150137_BETAFLIGHTF4.txt",
+    "version": "4.4.3",
+    "date": "20260524_150137",
+    "lines": 217,
+    "stock": false,
+    "sha256": "55597db6d35ac4303901c6a07f52ab02dfec6f384d066d0c031d988f9829ea51",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Nov 23 2023 / 05:21:21 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260612_203805_BETAFLIGHTF4.txt",
+    "version": "2025.12.4",
+    "date": "20260612_203805",
+    "lines": 45,
+    "stock": false,
+    "sha256": "a05f8012e495e45088e136f334c7a2d4de805ae55f4f8afba679694e99187080",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 01:27:22 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "C35/gyroworking.txt",
+    "version": "2025.12.4",
+    "date": "",
+    "lines": 49,
+    "stock": false,
+    "sha256": "095892627b47ce0bddcbc355f5765531a78aae65edc9b516969a1a614816c617",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 28 2026 / 17:56:17 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260612_234744_BETAFLIGHTF4.txt",
+    "version": "4.4.3",
+    "date": "20260612_234744",
+    "lines": 45,
+    "stock": false,
+    "sha256": "4ec252e2fa5e7678f8bdf8c8902c156cdb672a1d8e2616fbe8761d9ae8460ccf",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Jun 13 2026 / 01:36:59 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260612_205407_BETAFLIGHTF4.txt",
+    "version": "4.4.3",
+    "date": "20260612_205407",
+    "lines": 44,
+    "stock": false,
+    "sha256": "3d51bd3d9818628435cd1962a5b52da07fe87d538c82d4fad24fbbe353c65165",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Jun 13 2026 / 01:36:59 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_CRUX35_20260612_200540_BETAFLIGHTF4.txt",
+    "version": "2025.12.4",
+    "date": "20260612_200540",
+    "lines": 202,
+    "stock": false,
+    "sha256": "b060247267d15c53ca2454a4da5036d1d9b3f141890e98149d48370517712329",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 00:37:07 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "C35/BTFL_cli_backup_20260612_235914_BETAFLIGHTF4.txt",
+    "version": "4.4.3",
+    "date": "20260612_235914",
+    "lines": 45,
+    "stock": false,
+    "sha256": "4ec252e2fa5e7678f8bdf8c8902c156cdb672a1d8e2616fbe8761d9ae8460ccf",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Jun 13 2026 / 01:36:59 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "A65/SavageTune.txt",
+    "version": "4.5.0",
+    "date": "",
+    "lines": 270,
+    "stock": false,
+    "sha256": "46f8ea36d2a85bfbbedae433cbf37beefb1b33ac5a33c52a7c06ee4228f2c95c",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "HD0Halo/Stock.txt",
+    "version": "4.5.2",
+    "date": "",
+    "lines": 53,
+    "stock": true,
+    "sha256": "7a6506991adb4e6a2d9c074e395e235cdf76cf827896cad6f9b47536c70e7757",
+    "header": "# Betaflight / STM32H743 (SH74) 4.5.2 Mar 21 2025 / 17:16:49 (024f8e13d) MSP API: 1.46"
+  },
+  {
+    "path": "HD0Halo/stock_updateFW.txt",
+    "version": "2026.6.2",
+    "date": "",
+    "lines": 55,
+    "stock": true,
+    "sha256": "bd6018f4af6280c61c8b01a7e24ddecc203c3fa265952d019dfe91f56e5287bf",
+    "header": "# Betaflight / STM32H743 (H743) 2026.6.2 Oct 15 2026 / 11:22:37 (e0b7bb01b) MSP API: 1.48"
+  },
+  {
+    "path": "HD0Halo/AOS7_SAVAGE.txt",
+    "version": "2026.6.2",
+    "date": "",
+    "lines": 162,
+    "stock": false,
+    "sha256": "83d18b6884116277b87ed9c8036c5f088235fafc5eb84acc13e34fde3e5d5cd7",
+    "header": "# Betaflight / STM32H743 (H743) 2026.6.2 Oct 15 2026 / 11:22:37 (e0b7bb01b) MSP API: 1.48"
+  },
+  {
+    "path": "A65Race2/Stock.txt",
+    "version": "2026.6.0",
+    "date": "",
+    "lines": 174,
+    "stock": true,
+    "sha256": "b3547f24fe20abb830e66b24799a2802c4f293e560cb4e378e40ce9bc7f859bc",
+    "header": "# Betaflight / STM32G47X (G473) 2026.6.0-alpha May 15 2026 / 06:14:55 (e92c10887) MSP API: 1.48"
+  },
+  {
+    "path": "A65Race2/Setup.txt",
+    "version": "2026.6.0",
+    "date": "",
+    "lines": 196,
+    "stock": false,
+    "sha256": "4977c2acabfa3d109c71669c3cca483d3dee61c0136b683aa0fb19b528bfd6e7",
+    "header": "# Betaflight / STM32G47X (G473) 2026.6.0-alpha May 15 2026 / 06:14:55 (e92c10887) MSP API: 1.48"
+  },
+  {
+    "path": "AIO5/_STOCK_BTFL_cli_M7_FREESTYLE HD_20260824_194248_CRAZYBEEF4SX1280.txt",
+    "version": "4.5.1",
+    "date": "20260824_194248",
+    "lines": 336,
+    "stock": true,
+    "sha256": "73a86e5a1ccfee00428dc2794efd6903df2527e5504935a31f79b136348db884",
+    "header": "# Betaflight / STM32F411 (S411) 4.5.1 Aug  1 2024 / 13:38:51 (77d01ba3b) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/initial/Initial",
+    "version": "4.5.1",
+    "date": "",
+    "lines": 162,
+    "stock": false,
+    "sha256": "c081125f0c51d66eb8e64212a72e0253db5cfae1fcecaf2daacb89d697e4bd8a",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.1 Sep 24 2024 / 14:34:30 (a8c404b64) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/initial/BTFL_cli_backup_TWIGGY_20260730_231307_SPEEDYBEEF405AIO.txt",
+    "version": "4.5.1",
+    "date": "20260730_231307",
+    "lines": 127,
+    "stock": false,
+    "sha256": "a451d9eedb75444e3a76efd281e5477be072884dd55b3b32e2f560572df8bd6a",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.1 Sep 24 2024 / 14:34:30 (a8c404b64) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/initial/Twiggy_Ringing_01.txt",
+    "version": "4.5.1",
+    "date": "",
+    "lines": 162,
+    "stock": false,
+    "sha256": "733d8b874fecf0d6c679babbfbbf6e7bf34f387cf8c5ed59784559fecd16aa8c",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.1 Sep 24 2024 / 14:34:30 (a8c404b64) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/initial/BTFL_cli_backup_20260719_123803_SPEEDYBEEF405AIO.txt",
+    "version": "4.5.1",
+    "date": "20260719_123803",
+    "lines": 49,
+    "stock": false,
+    "sha256": "256cd4f5d1ebeea0031dfbab064c94d8ffcbfbe6f9f6da95a209f46f4f696f4c",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.1 Sep 24 2024 / 14:34:30 (a8c404b64) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/initial/Pre_FW_Update.txt",
+    "version": "4.5.1",
+    "date": "",
+    "lines": 160,
+    "stock": false,
+    "sha256": "187aef05c810446c8ec66543ccbb3cf85d3725c275b7a60164d67c3db1acece7",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.1 Sep 24 2024 / 14:34:30 (a8c404b64) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/initial/TWIGGY_CONFIG20260720.txt",
+    "version": "4.5.1",
+    "date": "20260720",
+    "lines": 90,
+    "stock": false,
+    "sha256": "f410287da6f4eefb6d04479a4e3e7ab94123f0e6651a3f8abd8da216691a5461",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.1 Sep 24 2024 / 14:34:30 (a8c404b64) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/initial/Updated_RC_Link.txt",
+    "version": "4.5.5",
+    "date": "",
+    "lines": 167,
+    "stock": false,
+    "sha256": "b37e51291358f7d3cad45fa400eb431bfaec2c4a99e1409b2884598b1a2d3292",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.5 Aug  4 2026 / 01:02:27 (norevision) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/tuning/P-D+Master Set.txt",
+    "version": "4.5.5",
+    "date": "",
+    "lines": 235,
+    "stock": false,
+    "sha256": "5065e2a557ef44656586b05170c299c1f53be26b70190da83e6fb32d393736bc",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.5 Aug  4 2026 / 01:02:27 (norevision) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/tuning/SAVAGE_TUNE.txt",
+    "version": "4.5.5",
+    "date": "",
+    "lines": 237,
+    "stock": false,
+    "sha256": "fc8d5b592d60140659412cf6a24f74ff2802ed32485ff81c9bc2991c6ed062e0",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.5 Aug  4 2026 / 01:02:27 (norevision) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/tuning/D-Set.txt",
+    "version": "4.5.5",
+    "date": "",
+    "lines": 235,
+    "stock": false,
+    "sha256": "07037d734fb6da355ee352a6de4355800c4ca1658136eb3f03ab77a432299be7",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.5 Aug  4 2026 / 01:02:27 (norevision) MSP API: 1.46"
+  },
+  {
+    "path": "SB405-AIO/tuning/Twiggy_PreTune.txt",
+    "version": "4.5.1",
+    "date": "",
+    "lines": 163,
+    "stock": false,
+    "sha256": "98f3b65bdf121fd6b15df1fb81e9dff0b244bdfa3251fc1582696922d22e0da0",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.1 Sep 24 2024 / 14:34:30 (a8c404b64) MSP API: 1.46"
+  },
+  {
+    "path": "HD0Halo/Logs/AOS7_SAVAGE.txt",
+    "version": "2026.6.2",
+    "date": "",
+    "lines": 172,
+    "stock": false,
+    "sha256": "99e1b3bcc53503b209919a20e8f42edb72ca5159f599ec05ad84e83f856b4050",
+    "header": "# Betaflight / STM32H743 (H743) 2026.6.2 Oct 15 2026 / 11:22:37 (e0b7bb01b) MSP API: 1.48"
+  },
+  {
+    "path": "A65/Betaflight/BTFL_cli_backup_AIR65_FS_20260608_101955_BETAFPVG473.txt",
+    "version": "4.5.0",
+    "date": "20260608_101955",
+    "lines": 204,
+    "stock": false,
+    "sha256": "f543b0478519c59fc10f56554bb22dcc10bf7ea6ef9903ae6b7cc3e7cc02b18b",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "A65/Betaflight/BTFL_cli_backup_AIR65_FS_20260608_104201_BETAFPVG473.txt",
+    "version": "4.5.0",
+    "date": "20260608_104201",
+    "lines": 209,
+    "stock": false,
+    "sha256": "ea52c9c1087b67372957ec58148b6e264b41b23785abca90857967e9cb7b7b8e",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "A65/Betaflight/BTFL_cli_backup_AIR65_FS_20260608_101658_BETAFPVG473.txt",
+    "version": "4.5.0",
+    "date": "20260608_101658",
+    "lines": 204,
+    "stock": false,
+    "sha256": "f543b0478519c59fc10f56554bb22dcc10bf7ea6ef9903ae6b7cc3e7cc02b18b",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "A65/tuning/air65_30kMotors_Tuning_Config.txt",
+    "version": "4.5.0",
+    "date": "",
+    "lines": 272,
+    "stock": false,
+    "sha256": "2f45634eac1e745225b610b58c194fde3ff06156a75f208e49c8246971c0bd65",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "A65/tuning/air65_30kMotors_Initial.txt",
+    "version": "4.5.0",
+    "date": "",
+    "lines": 276,
+    "stock": false,
+    "sha256": "0136361c08b7b6e5b996ddd814697e33189af0b0c78d5c5014921bbff6395a2a",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "A65/tuning/air65_30kMotors_Filters_set.txt",
+    "version": "4.5.0",
+    "date": "",
+    "lines": 273,
+    "stock": false,
+    "sha256": "9a43a27e9f917ccf68aebb5f756233be86bfc0e654872b2a64f2805f274f3ab9",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "A65/tuning/air65_30kMotors_added_RC_Link.txt",
+    "version": "4.5.0",
+    "date": "",
+    "lines": 280,
+    "stock": false,
+    "sha256": "96135995d45299be62673a0a3246fc8b5947463a19f05c7c93067b8238ff8786",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "A65/tuning/MasterTesting.txt",
+    "version": "4.5.0",
+    "date": "",
+    "lines": 271,
+    "stock": false,
+    "sha256": "81d6e3b8ef857be3f3865a4eb9bd77f160670384523de0e028e3ea837a5152e6",
+    "header": "# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46"
+  },
+  {
+    "path": "Lazarus/tuning/SAVAGE TUNE.txt",
+    "version": "4.6.0",
+    "date": "",
+    "lines": 262,
+    "stock": false,
+    "sha256": "d2d7d65f71ebe74dc04b2c8426618fcab3bdcfba4e24e2665857497a30b373b3",
+    "header": "# Betaflight / STM32G47X (SG47) 4.6.0 May 12 2025 / 09:54:06 (norevision) MSP API: 1.47"
+  },
+  {
+    "path": "Lazarus/tuning/Tordle_INIT_RCset.txt",
+    "version": "4.6.0",
+    "date": "",
+    "lines": 249,
+    "stock": false,
+    "sha256": "49e92dd2624fd51a42eac036464567484d46fb6fbc3119565ef7ef0e5a1500a3",
+    "header": "# Betaflight / STM32G47X (SG47) 4.6.0 May 12 2025 / 09:54:06 (norevision) MSP API: 1.47"
+  },
+  {
+    "path": "Lazarus/tuning/Tordle_Initial.txt",
+    "version": "4.6.0",
+    "date": "",
+    "lines": 241,
+    "stock": false,
+    "sha256": "389df611cace974ee56676db256e31b74de1933509df7dbfdd1175f726368aa6",
+    "header": "# Betaflight / STM32G47X (SG47) 4.6.0 May 12 2025 / 09:54:06 (norevision) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260614_122636_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260614_122636",
+    "lines": 168,
+    "stock": false,
+    "sha256": "d7d4dfe13f9cb32ebe605684728fd6ba915b65e0e6773ef4e050547e29291d40",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260621_150101_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260621_150101",
+    "lines": 196,
+    "stock": false,
+    "sha256": "5fb2fbc9d3686f8922ee7609d2c9dcb05887d9b84b5b82779d3fb8ac683a8312",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260614_102812_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260614_102812",
+    "lines": 161,
+    "stock": false,
+    "sha256": "7aa2f9de5bb1006621e47559bf49489306ee43d9db6e5ea2aca9a34b71fbdd10",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260614_103333_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260614_103333",
+    "lines": 162,
+    "stock": false,
+    "sha256": "34ec4f3adca91a875f88afb15c12fade5062e63a6ad33af6e494be9da24df870",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260613_220411_SPEEDYBEEF405V5.txt",
+    "version": "4.5.2",
+    "date": "20260613_220411",
+    "lines": 60,
+    "stock": false,
+    "sha256": "0ee8068a7f44b82b964f06faec22f83c427ac549b660c55db6e4485f3a2e2544",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.2 Aug 18 2025 / 18:44:16 (norevision) MSP API: 1.46"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260623_233538_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260623_233538",
+    "lines": 203,
+    "stock": false,
+    "sha256": "1f974b078f98a98d284fcc279ddb42446558768e3c0c480333864b15663123c4",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260623_232751_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260623_232751",
+    "lines": 204,
+    "stock": false,
+    "sha256": "1f2929198e3677ce255081c801700d772d5de77747295c0c5532e2664faf6cbd",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260623_234318_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260623_234318",
+    "lines": 201,
+    "stock": false,
+    "sha256": "c8ff1701afb93fe2d9a494c80626d206eb2db4ba6620bf99619f1c8331aef9cb",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260621_101101_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260621_101101",
+    "lines": 195,
+    "stock": false,
+    "sha256": "f4f90768bbaa583bd929bfc4e0508ec56dab5a434ca9a61920fdd1c86930d8ce",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260621_150726_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260621_150726",
+    "lines": 198,
+    "stock": false,
+    "sha256": "73b4c0ada4976aafd4fd562d1534395ceaede97690f655e4653db31f1ab7dfbb",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260623_234912_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260623_234912",
+    "lines": 203,
+    "stock": false,
+    "sha256": "9c6d73b6f7aad1955be3a00d01cc8016500ba54b9b29f630d8b8036345d7f98b",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 15:17:38 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_20260613_221931_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260613_221931",
+    "lines": 52,
+    "stock": false,
+    "sha256": "f1052e0250d8a8762bf01576f9c0a90138bbf2653fd5ace2500f07273e4c14ac",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260623_234145_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260623_234145",
+    "lines": 202,
+    "stock": false,
+    "sha256": "b01a99b782d9b324ce9ea6dcb52e79b14cdfeadc62fd38c45e2c80b093c5edbc",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260621_145741_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260621_145741",
+    "lines": 196,
+    "stock": false,
+    "sha256": "728b022c3a0cb3daccb7db8b9a014d821215f52c93f3d3cd17b5b22eb944ffa5",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_AOS_5_20260621_100347_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260621_100347",
+    "lines": 193,
+    "stock": false,
+    "sha256": "08883818a09187ab5ae741400c1d66a2e7ebcef90988e3567651844b9cf941c9",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS 5/Backups/BTFL_cli_backup_20260613_230101_SPEEDYBEEF405V5.txt",
+    "version": "2025.12.4",
+    "date": "20260613_230101",
+    "lines": 124,
+    "stock": false,
+    "sha256": "b67466b78eb6c6290bfd33c6d20d2e8a06c7137d06eb88f8593852d2a691b66d",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun 13 2026 / 19:37:50 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260607_205224_SPEEDYBEEF405MINI.txt",
+    "version": "2025.12.4",
+    "date": "20260607_205224",
+    "lines": 200,
+    "stock": false,
+    "sha256": "4d88745d09fc4dae14385e729936e8204800c64a802217df2af74a7f5d170382",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun  8 2026 / 01:33:19 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_20260528_201552_SPEEDYBEEF405V5.txt",
+    "version": "4.5.2",
+    "date": "20260528_201552",
+    "lines": 52,
+    "stock": false,
+    "sha256": "ed4c1bdd37e6b06a59e29f842c06e1927d6ef5ebbe4019bbf10d30a88a5d6d6c",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.2 Aug 18 2025 / 18:44:16 (norevision) MSP API: 1.46"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS-4_20260322_181336_SPEEDYBEEF405MINI.txt",
+    "version": "4.4.3",
+    "date": "20260322_181336",
+    "lines": 103,
+    "stock": false,
+    "sha256": "749130c1bd90f407e6f1ebde9639656f9d666e096e116bc1af3f34af431b3fe5",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Mar 22 2026 / 21:45:25 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260607_223844_SPEEDYBEEF405MINI.txt",
+    "version": "2025.12.4",
+    "date": "20260607_223844",
+    "lines": 205,
+    "stock": false,
+    "sha256": "fae635e7b199d806f6aca274a9d076e132fea003123475221be3fec3cd268e21",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun  8 2026 / 01:33:19 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260411_022605_SPEEDYBEEF405MINI.txt",
+    "version": "4.4.3",
+    "date": "20260411_022605",
+    "lines": 179,
+    "stock": false,
+    "sha256": "f6bcc5b5719a010414e28b8ad23e5fb550a28901aad1f8d4ea318911a63fdd9b",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Feb  3 2026 / 16:27:40 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260608_231536_SPEEDYBEEF405MINI.txt",
+    "version": "2025.12.4",
+    "date": "20260608_231536",
+    "lines": 220,
+    "stock": false,
+    "sha256": "ab977edb38f136b4494ff3493c9cad05b75f9c161d590516fac55b82984a7e26",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun  8 2026 / 01:33:19 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS-4_20260325_222152_SPEEDYBEEF405MINI.txt",
+    "version": "4.4.3",
+    "date": "20260325_222152",
+    "lines": 152,
+    "stock": false,
+    "sha256": "51d324e1ec8a433f8e2634093af3ae51a162b524211e7d78ca77cb78584691c4",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Mar 22 2026 / 21:45:25 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260606_140109_SPEEDYBEEF405MINI.txt",
+    "version": "4.4.3",
+    "date": "20260606_140109",
+    "lines": 205,
+    "stock": false,
+    "sha256": "a165243c3ead92626b878c7d0e4326124e53a6e005a8ad47433096c65bedd0ba",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Feb  3 2026 / 16:27:40 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS-4_20260325_222454_SPEEDYBEEF405MINI.txt",
+    "version": "4.4.3",
+    "date": "20260325_222454",
+    "lines": 151,
+    "stock": false,
+    "sha256": "c9c84c6e20fb94aa61dcbd0a8c6de040b060a78849bb5a1cd01121e0e7492e41",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Mar 22 2026 / 21:45:25 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260608_223030_SPEEDYBEEF405MINI.txt",
+    "version": "2025.12.4",
+    "date": "20260608_223030",
+    "lines": 209,
+    "stock": false,
+    "sha256": "bf4a73c8958cbb312811e4f80c322806e3aa47dcbdb7923dde9c67a3c88baa94",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun  8 2026 / 01:33:19 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_20260325_222846_SPEEDYBEEF405MINI.txt",
+    "version": "2025.12.2",
+    "date": "20260325_222846",
+    "lines": 48,
+    "stock": false,
+    "sha256": "61c9664803580df906807df31268511e945792e126071b50af541cafba6afb6d",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.2 Feb  8 2026 / 03:16:23 (79065c96b) MSP API: 1.47"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260607_203353_SPEEDYBEEF405MINI.txt",
+    "version": "4.4.3",
+    "date": "20260607_203353",
+    "lines": 204,
+    "stock": false,
+    "sha256": "f6e8d0f5942701b0762c72ced65c8d5ae4ebb31c5f099ad80ac89da0411f75ec",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Feb  3 2026 / 16:27:40 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260411_005531_SPEEDYBEEF405MINI.txt",
+    "version": "4.4.3",
+    "date": "20260411_005531",
+    "lines": 181,
+    "stock": false,
+    "sha256": "94ce439a1f3a808984f02224ab1d6b1a93bc5cf5f983b352aaf4af46929a928e",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Feb  3 2026 / 16:27:40 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260608_234018_SPEEDYBEEF405MINI.txt",
+    "version": "2025.12.4",
+    "date": "20260608_234018",
+    "lines": 222,
+    "stock": false,
+    "sha256": "38bdf88aa73670f6c1f4d3351d5e349c414124e65a51ad57268ebda742140c73",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun  8 2026 / 01:33:19 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260607_203011_SPEEDYBEEF405MINI.txt",
+    "version": "4.4.3",
+    "date": "20260607_203011",
+    "lines": 205,
+    "stock": false,
+    "sha256": "90058a148467b9daef16939c73c082b3a211da363a001104cda74e8331e95969",
+    "header": "# Betaflight / STM32F405 (S405) 4.4.3 Feb  3 2026 / 16:27:40 (738127e7e) MSP API: 1.45"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260607_205438_SPEEDYBEEF405MINI.txt",
+    "version": "2025.12.4",
+    "date": "20260607_205438",
+    "lines": 201,
+    "stock": false,
+    "sha256": "040d49c9c202aae2fe74642ae83fc1359cdc5052f250ce0b5c4f000d3215aebd",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun  8 2026 / 01:33:19 (c2af58a0c) MSP API: 1.47"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_20260326_001302_SPEEDYBEEF405MINI.txt",
+    "version": "4.5.3",
+    "date": "20260326_001302",
+    "lines": 115,
+    "stock": false,
+    "sha256": "3cd8319842b18f14e3350033eaf428db7115613ebb6b84a8d9e483dad31df701",
+    "header": "# Betaflight / STM32F405 (S405) 4.5.3 Jan 31 2026 / 11:35:40 (0e533ba76) MSP API: 1.46"
+  },
+  {
+    "path": "AOS4/BetaFlight/BTFL_cli_backup_AOS_4_20260608_190656_SPEEDYBEEF405MINI.txt",
+    "version": "2025.12.4",
+    "date": "20260608_190656",
+    "lines": 204,
+    "stock": false,
+    "sha256": "188a8700f47ffaf9f4de9d6679725ed986822ffa9b39c5824f6e63f0d0940088",
+    "header": "# Betaflight / STM32F405 (F405) 2025.12.4 Jun  8 2026 / 01:33:19 (c2af58a0c) MSP API: 1.47"
+  }
+]

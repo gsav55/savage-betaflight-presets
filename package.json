@@ -1,0 +1,9 @@
+{
+  "name": "savage-betaflight-presets",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "python3 scripts/build.py && node indexer/indexer.js",
+    "check": "node indexer/check.js && python3 scripts/validate.py"
+  }
+}

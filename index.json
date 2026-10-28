@@ -1,0 +1,829 @@
+{
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "settings": {
+    "MetapropertyDirective": "#$",
+    "PresetCategories": {
+      "TUNE": "TUNE",
+      "RATES": "RATES",
+      "OSD": "OSD",
+      "VTX": "VTX",
+      "LEDS": "LEDS",
+      "MODES": "MODES",
+      "FILTERS": "FILTERS",
+      "RC_LINK": "RC_LINK",
+      "BNF": "BNF",
+      "OTHER": "OTHER"
+    },
+    "PresetCategoriesPriorities": {
+      "TUNE": 1000000000000,
+      "RATES": 10000,
+      "OSD": 0,
+      "VTX": 1000000,
+      "LEDS": 0,
+      "MODES": 0,
+      "RC_SMOOTHING": 100000000,
+      "FILTERS": 100,
+      "RC_LINK": 10000000000,
+      "BNF": 0,
+      "OTHER": 0
+    },
+    "MetadataTypes": {
+      "STRING": "STRING",
+      "STRING_ARRAY": "STRING_ARRAY",
+      "PRESET_CATEGORY": "PRESET_CATEGORY",
+      "FILE_PATH": "FILE_PATH",
+      "BOOLEAN": "BOOLEAN",
+      "WORDS_ARRAY": "WORDS_ARRAY",
+      "FILE_PATH_ARRAY": "FILE_PATH_ARRAY",
+      "PRESET_STATUS": "PRESET_STATUS",
+      "PRIORITY": "PRIORITY",
+      "PARSER": "PARSER"
+    },
+    "OptionsDirectives": {
+      "OPTION_DIRECTIVE": "option",
+      "BEGIN_OPTION_DIRECTIVE": "option begin",
+      "END_OPTION_DIRECTIVE": "option end",
+      "OPTION_CHECKED": "(checked)",
+      "OPTION_UNCHECKED": "(unchecked)",
+      "BEGIN_OPTION_GROUP_DIRECTIVE": "option_group begin",
+      "END_OPTION_GROUP_DIRECTIVE": "option_group end",
+      "EXCLUSIVE_OPTION_GROUP": "(exclusive)"
+    },
+    "PresetStatusEnum": [
+      "OFFICIAL",
+      "COMMUNITY",
+      "EXPERIMENTAL"
+    ],
+    "ParserEnum": [
+      "TEXT",
+      "MARKED"
+    ],
+    "presetsDir": "presets",
+    "presetsFileEncoding": "utf-8",
+    "presetsFileMetadata": {
+      "title": {
+        "type": "STRING",
+        "optional": false
+      },
+      "firmware_version": {
+        "type": "STRING_ARRAY",
+        "optional": false
+      },
+      "category": {
+        "type": "PRESET_CATEGORY",
+        "optional": false
+      },
+      "status": {
+        "type": "PRESET_STATUS",
+        "optional": false
+      },
+      "author": {
+        "type": "STRING",
+        "optional": true
+      },
+      "description": {
+        "type": "STRING_ARRAY",
+        "optional": true
+      },
+      "include": {
+        "type": "FILE_PATH_ARRAY",
+        "optional": true
+      },
+      "keywords": {
+        "type": "WORDS_ARRAY",
+        "optional": true
+      },
+      "hidden": {
+        "type": "BOOLEAN",
+        "optional": true
+      },
+      "discussion": {
+        "type": "STRING",
+        "optional": true
+      },
+      "warning": {
+        "type": "STRING",
+        "optional": true
+      },
+      "disclaimer": {
+        "type": "STRING",
+        "optional": true
+      },
+      "include_warning": {
+        "type": "FILE_PATH_ARRAY",
+        "optional": true
+      },
+      "include_disclaimer": {
+        "type": "FILE_PATH_ARRAY",
+        "optional": true
+      },
+      "priority": {
+        "type": "PRIORITY",
+        "optional": true
+      },
+      "force_options_review": {
+        "type": "BOOLEAN",
+        "optional": true
+      },
+      "parser": {
+        "type": "PARSER",
+        "optional": true
+      }
+    }
+  },
+  "uniqueValues": {
+    "firmware_version": [
+      "2025.12",
+      "2026.6",
+      "4.4",
+      "4.5",
+      "4.6"
+    ],
+    "category": [
+      "OSD",
+      "OTHER",
+      "RATES"
+    ],
+    "author": [
+      "gsav55"
+    ],
+    "keywords": [
+      "personal",
+      "Savage",
+      "setup"
+    ]
+  },
+  "presets": [
+    {
+      "fullPath": "presets/2025.12/modes_gps.txt",
+      "hash": "eccc79b4f8f2a28415ebec2e3faec665912debfdd81fa92a84ea24a99abec7c4",
+      "title": "Savage - GPS rescue and modes (2025.12)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2025.12/modes_no_gps.txt",
+      "hash": "350b6861e37f6be17d7d7494e619d7e15d95c012f507bc89d4b86f1ad9d93363",
+      "title": "Savage - Non-GPS drop failsafe and modes (2025.12)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2025.12/osd_analog.txt",
+      "hash": "00ff1e095fc715721d247a5135434a01c759377aa915df60fcc3683cc24007e3",
+      "title": "Savage - ANALOG OSD (2025.12)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2025.12/osd_dji_o4.txt",
+      "hash": "217cc1edde3c9c45cd316469804acfa1db3171f68fd5f9a7ab1943a960f232f8",
+      "title": "Savage - DJI O4 OSD (2025.12)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2025.12/osd_hdzero.txt",
+      "hash": "1ec0db2a04810231b82a7d7e36680c13eab6c65769d20bcb76cd89d2de802d4b",
+      "title": "Savage - HDZERO OSD (2025.12)",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2026.6/modes_gps.txt",
+      "hash": "4adb6f1fef834acb59266a0abf3ce5ae1c5bd92c550a6f36b7716ce2bc52f127",
+      "title": "Savage - GPS rescue and modes (2026.6)",
+      "firmware_version": [
+        "2026.6"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2026.6/modes_no_gps.txt",
+      "hash": "4591069e2cb44f1a537ae3a64c6a439631219e5a95ad1d31a47449111bc2330b",
+      "title": "Savage - Non-GPS drop failsafe and modes (2026.6)",
+      "firmware_version": [
+        "2026.6"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2026.6/osd_analog.txt",
+      "hash": "0000f9cf05a6cc1c847e655a3e73ba6d7d4781aa70546997e92485390df007ae",
+      "title": "Savage - ANALOG OSD (2026.6)",
+      "firmware_version": [
+        "2026.6"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2026.6/osd_dji_o4.txt",
+      "hash": "c6f0735c047b1efaa6dc7aef34e0a3d235284f2d23633815c7f89b9a6967aabf",
+      "title": "Savage - DJI O4 OSD (2026.6)",
+      "firmware_version": [
+        "2026.6"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2026.6/osd_hdzero.txt",
+      "hash": "fc62344e118254444c205826374944a74fc02a59a981fa7c502d7360f41afd9c",
+      "title": "Savage - HDZERO OSD (2026.6)",
+      "firmware_version": [
+        "2026.6"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.4/modes_gps.txt",
+      "hash": "24a404a1c5b9c940ad1e760f01a2052ec484591377760a7b7b56b680ef361227",
+      "title": "Savage - GPS rescue and modes (4.4)",
+      "firmware_version": [
+        "4.4"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.4/modes_no_gps.txt",
+      "hash": "b649bd9e5a888e59ce0586dab03fd2bdb92dc017e4310eeb75938a4bb193d6c4",
+      "title": "Savage - Non-GPS drop failsafe and modes (4.4)",
+      "firmware_version": [
+        "4.4"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.4/osd_analog.txt",
+      "hash": "c8f170cf6611bef2e6fad076a6467b4a950956b8787fdcdd7530d21a897c0cc4",
+      "title": "Savage - ANALOG OSD (4.4)",
+      "firmware_version": [
+        "4.4"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.4/osd_dji_o4.txt",
+      "hash": "6a0af9e3a19fbad6ade05f7d2357de5706b3f8d1dfc3c1f18a2beeb8f91d7f38",
+      "title": "Savage - DJI O4 OSD (4.4)",
+      "firmware_version": [
+        "4.4"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.4/osd_hdzero.txt",
+      "hash": "43f3688b3a67fc952012709ffb70aa3d661d0c68ae1b59ea04c7a4f8954787af",
+      "title": "Savage - HDZERO OSD (4.4)",
+      "firmware_version": [
+        "4.4"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.5/modes_gps.txt",
+      "hash": "b32c89d4516fe2cf9d0275b48b2d1341a56c7ed6e540d87645da7e42c18695ad",
+      "title": "Savage - GPS rescue and modes (4.5)",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.5/modes_no_gps.txt",
+      "hash": "bfb56f32613215748c5ba8e441c0729c684c7cf9001d03bf0e54e70e458e3519",
+      "title": "Savage - Non-GPS drop failsafe and modes (4.5)",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.5/osd_analog.txt",
+      "hash": "f036767d2e517d142552e3942b675eb30e8e41fb92fe598fd05c66e7e202a447",
+      "title": "Savage - ANALOG OSD (4.5)",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.5/osd_dji_o4.txt",
+      "hash": "445999b14995abd98f1149fd8dd99a88bf8988735e32fc180886ab6f1bc3251c",
+      "title": "Savage - DJI O4 OSD (4.5)",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.5/osd_hdzero.txt",
+      "hash": "830b005622754144dacab7b3e154dd1bdeebbde45461134894951590b5bd3332",
+      "title": "Savage - HDZERO OSD (4.5)",
+      "firmware_version": [
+        "4.5"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.6/modes_gps.txt",
+      "hash": "6d30a7baea0ed90c7fb09a656b3d7ac303314ee8426ba2e99cc9596adcdebdb4",
+      "title": "Savage - GPS rescue and modes (4.6)",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.6/modes_no_gps.txt",
+      "hash": "d414fca256a76c60eb3e9e88b6074bac28da034ceb8fa5090a85af19d4dd273a",
+      "title": "Savage - Non-GPS drop failsafe and modes (4.6)",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "OTHER",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.6/osd_analog.txt",
+      "hash": "909c3afc7961e5ceb19a86c81ea9cb8286fcdd683ef2f0ebaacd35a4b72ac04f",
+      "title": "Savage - ANALOG OSD (4.6)",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.6/osd_dji_o4.txt",
+      "hash": "8d4ebae85bf4c6347f90adb6b9ff72f41c2f231b42edaa08825c6a5e6f9728b6",
+      "title": "Savage - DJI O4 OSD (4.6)",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.6/osd_hdzero.txt",
+      "hash": "95e71dd8d1f1afa7978800921faa86c6a2989bc1ff5c9910ea94a8f0e81e6380",
+      "title": "Savage - HDZERO OSD (4.6)",
+      "firmware_version": [
+        "4.6"
+      ],
+      "category": "OSD",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/rates/aos4_main.txt",
+      "hash": "8e8a58b058667e3916cb05630458eb8ec247224fb89438dc0db16e4199650e5f",
+      "title": "Savage - AOS 4 - 200 / 720 / 57",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    },
+    {
+      "fullPath": "presets/rates/aos4_soft.txt",
+      "hash": "9e5ecedf189632471b4c1fbfca2ec96b1cd087112e6bec72df6a5589d5abd381",
+      "title": "Savage - AOS 4 - 200 / 530 / 50",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    },
+    {
+      "fullPath": "presets/rates/aos5_freestyle.txt",
+      "hash": "1d53924aeeefd84c5667b7928595033355b6502fc47bff8c5f209a65eb218707",
+      "title": "Savage - AOS 5 - 130 / 700 / 65",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    },
+    {
+      "fullPath": "presets/rates/aos5_smooth.txt",
+      "hash": "f5c478c2bb673a837e670bfbf1e4d6b0af710acf06cf9855a5b062306ad58522",
+      "title": "Savage - AOS 5 - 100 / 700 / 72",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    },
+    {
+      "fullPath": "presets/rates/everyday_540.txt",
+      "hash": "efd269c006d764bd925ee989ce7624110b3af0c59b9a869089954c5a66d5fcc8",
+      "title": "Savage - Everyday - 60 / 540 / 20",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    },
+    {
+      "fullPath": "presets/rates/halo_550.txt",
+      "hash": "aaf0559240640aae0b8754d14bc7240ca7b5faebaf22cd476ef66c115bbd38d6",
+      "title": "Savage - Latest Halo - 60 / 550 / 20",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    },
+    {
+      "fullPath": "presets/rates/hdzero_yaw3.txt",
+      "hash": "6b52078db10962b4ebdb5175e0ade108a247506a9daa1fcf067cb4aeb7b33897",
+      "title": "Savage - HDZero whoop - 60 / 540 / yaw expo 3",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    },
+    {
+      "fullPath": "presets/rates/m8_fast.txt",
+      "hash": "228abbc97c614ad6387057cdea9cbfbe4e4aa80ae5e10e2a3703ff1686238eb4",
+      "title": "Savage - M8 - 200 / 1100 / 54",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    },
+    {
+      "fullPath": "presets/rates/m8_freestyle.txt",
+      "hash": "22826883807713b6bb61692592a08c68ecf1d599cb979442005738cf69abf959",
+      "title": "Savage - M8 - 200 / 900 / 25",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    },
+    {
+      "fullPath": "presets/rates/tuning_150.txt",
+      "hash": "4757911be43c19d8f67d0844310da55d4de7ddc787c36309007773cb7f45fb8c",
+      "title": "Savage - Tuning sticks - 150 / 150 / 0",
+      "firmware_version": [
+        "4.4",
+        "4.5",
+        "4.6",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "RATES",
+      "status": "EXPERIMENTAL",
+      "author": "gsav55",
+      "keywords": [
+        "Savage",
+        "personal",
+        "setup"
+      ],
+      "force_options_review": true,
+      "priority": 10000
+    }
+  ]
+}

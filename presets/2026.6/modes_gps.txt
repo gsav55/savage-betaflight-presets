@@ -1,0 +1,126 @@
+#$ TITLE: Savage - GPS rescue and modes (2026.6)
+#$ FIRMWARE_VERSION: 2026.6
+#$ CATEGORY: OTHER
+#$ STATUS: EXPERIMENTAL
+#$ AUTHOR: gsav55
+#$ KEYWORDS: Savage, personal, setup
+#$ FORCE_OPTIONS_REVIEW: true
+#$ DESCRIPTION: Replaces all 20 mode slots and clears all 30 adjustment ranges. AUX channel numbers in the description are one-based.
+#$ DESCRIPTION: Newest layout: AUX1 ARM 1500-2100; AUX2 HORIZON 1125-1275, ANGLE 1325-1450, PREARM 1300-1625. AUX2 ALT HOLD 1550-1675, POS HOLD 1750-1875, RESCUE 1950-2100.
+#$ DESCRIPTION: AUX3 BEEPER 1900-2100 and TURTLE 1400-1600. Review the alternatives against your transmitter.
+#$ DESCRIPTION: GPS preset requires GPS and GPS rescue support; altitude/position hold additionally require the corresponding firmware features and sensors.
+#$ DESCRIPTION: GPS rescue trajectory, throttle and receiver Stage 1 channel behavior need airframe-specific setup; those values are preserved.
+#$ DESCRIPTION: Select only the preset matching your firmware generation.
+#$ WARNING: Remove props and verify every mode and failsafe on the bench before flight. GPS rescue requires a valid home fix and airframe-specific rescue setup.
+
+# Replace all mode slots and clear old in-flight adjustments.
+aux 0 0 0 900 900 0 0
+aux 1 0 0 900 900 0 0
+aux 2 0 0 900 900 0 0
+aux 3 0 0 900 900 0 0
+aux 4 0 0 900 900 0 0
+aux 5 0 0 900 900 0 0
+aux 6 0 0 900 900 0 0
+aux 7 0 0 900 900 0 0
+aux 8 0 0 900 900 0 0
+aux 9 0 0 900 900 0 0
+aux 10 0 0 900 900 0 0
+aux 11 0 0 900 900 0 0
+aux 12 0 0 900 900 0 0
+aux 13 0 0 900 900 0 0
+aux 14 0 0 900 900 0 0
+aux 15 0 0 900 900 0 0
+aux 16 0 0 900 900 0 0
+aux 17 0 0 900 900 0 0
+aux 18 0 0 900 900 0 0
+aux 19 0 0 900 900 0 0
+adjrange 0 0 0 900 900 0 0 0 0
+adjrange 1 0 0 900 900 0 0 0 0
+adjrange 2 0 0 900 900 0 0 0 0
+adjrange 3 0 0 900 900 0 0 0 0
+adjrange 4 0 0 900 900 0 0 0 0
+adjrange 5 0 0 900 900 0 0 0 0
+adjrange 6 0 0 900 900 0 0 0 0
+adjrange 7 0 0 900 900 0 0 0 0
+adjrange 8 0 0 900 900 0 0 0 0
+adjrange 9 0 0 900 900 0 0 0 0
+adjrange 10 0 0 900 900 0 0 0 0
+adjrange 11 0 0 900 900 0 0 0 0
+adjrange 12 0 0 900 900 0 0 0 0
+adjrange 13 0 0 900 900 0 0 0 0
+adjrange 14 0 0 900 900 0 0 0 0
+adjrange 15 0 0 900 900 0 0 0 0
+adjrange 16 0 0 900 900 0 0 0 0
+adjrange 17 0 0 900 900 0 0 0 0
+adjrange 18 0 0 900 900 0 0 0 0
+adjrange 19 0 0 900 900 0 0 0 0
+adjrange 20 0 0 900 900 0 0 0 0
+adjrange 21 0 0 900 900 0 0 0 0
+adjrange 22 0 0 900 900 0 0 0 0
+adjrange 23 0 0 900 900 0 0 0 0
+adjrange 24 0 0 900 900 0 0 0 0
+adjrange 25 0 0 900 900 0 0 0 0
+adjrange 26 0 0 900 900 0 0 0 0
+adjrange 27 0 0 900 900 0 0 0 0
+adjrange 28 0 0 900 900 0 0 0 0
+adjrange 29 0 0 900 900 0 0 0 0
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Switch layout - choose exactly one
+    #$ OPTION BEGIN (CHECKED): Newest six-position selector layout
+        aux 0 0 0 1500 2100 0 0
+        aux 1 1 1 1325 1450 0 0
+        aux 2 2 1 1125 1275 0 0
+        aux 3 3 1 1550 1675 0 0
+        aux 4 11 1 1750 1875 0 0
+        aux 5 46 1 1950 2100 0 0
+        aux 6 13 2 1900 2100 0 0
+        aux 7 35 2 1400 1600 0 0
+        aux 8 36 1 1300 1625 0 0
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): Legacy analog whoop layout (rescue on AUX7)
+        aux 0 0 0 1700 2100 0 0
+        aux 1 1 1 1300 1700 0 0
+        aux 2 2 1 1700 2100 0 0
+        aux 3 13 5 1700 2100 0 0
+        aux 4 19 2 1700 2100 0 0
+        aux 5 28 2 1300 1700 0 0
+        aux 6 35 4 1700 2100 0 0
+        aux 7 36 7 1700 2100 0 0
+        aux 8 39 3 1700 2100 0 0
+        aux 9 46 6 1700 2100 0 0
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): Legacy HDZero whoop layout (rescue on AUX7)
+        aux 0 0 0 1775 2100 0 0
+        aux 1 1 1 1400 1600 0 0
+        aux 2 2 1 1700 2100 0 0
+        aux 3 13 5 1700 2100 0 0
+        aux 4 35 4 1800 2100 0 0
+        aux 5 36 7 1700 2100 0 0
+        aux 6 39 3 1700 2100 0 0
+        aux 7 46 6 1700 2100 0 0
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): Legacy Twiggy layout (rescue on AUX7)
+        aux 0 0 0 1700 2100 0 0
+        aux 1 1 1 1700 2100 0 0
+        aux 2 2 1 1300 1675 0 0
+        aux 3 13 5 1700 2100 0 0
+        aux 4 26 2 1300 2100 0 0
+        aux 5 35 4 1700 2100 0 0
+        aux 6 36 7 1700 2100 0 0
+        aux 7 46 6 1700 2100 0 0
+    #$ OPTION END
+#$ OPTION_GROUP END
+feature GPS
+set failsafe_procedure = GPS-RESCUE
+set failsafe_delay = 15
+set gps_rescue_allow_arming_without_fix = OFF
+set gps_rescue_sanity_checks = RESCUE_SANITY_ON
+#$ OPTION BEGIN (UNCHECKED): Allow arming without GPS fix (as in backups; rescue unavailable until fix and home acquired)
+    set gps_rescue_allow_arming_without_fix = ON
+#$ OPTION END
+#$ OPTION BEGIN (UNCHECKED): UBLOX receiver: WAAS and Galileo
+    set gps_sbas_mode = WAAS
+    set gps_ublox_use_galileo = ON
+#$ OPTION END
+#$ OPTION BEGIN (UNCHECKED): Rate-profile selection on AUX4 (newest layout only)
+    adjrange 0 0 3 900 2100 29 3 0 0
+#$ OPTION END

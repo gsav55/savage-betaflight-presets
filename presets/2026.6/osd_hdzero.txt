@@ -1,0 +1,133 @@
+#$ TITLE: Savage - HDZERO OSD (2026.6)
+#$ FIRMWARE_VERSION: 2026.6
+#$ CATEGORY: OSD
+#$ STATUS: EXPERIMENTAL
+#$ AUTHOR: gsav55
+#$ KEYWORDS: Savage, personal, setup
+#$ FORCE_OPTIONS_REVIEW: true
+#$ DESCRIPTION: Layout based on HD0Halo/AOS7_SAVAGE.txt. Layout visibility is normalized across all OSD profiles; active profile is 1.
+#$ DESCRIPTION: Single-cell battery reporting and more GPS details are checked by default. GPS display is off by default; select GPS-equipped drone to enable GPS overlays.
+#$ DESCRIPTION: OSD selection does not set flight GPS or failsafe; apply the matching modes preset separately.
+#$ DESCRIPTION: Analog uses NTSC 30x13. HD uses 53x20; configure the VTX UART for MSP DisplayPort separately and check the negotiated goggles canvas.
+#$ DESCRIPTION: More details includes home direction/distance, speed, altitude and coordinates; PDOP is unavailable in 4.4.
+#$ DESCRIPTION: No signal-strength alarm threshold is copied because it depends on the receiver packet rate.
+
+feature OSD
+set osd_profile = 1
+set report_cell_voltage = OFF
+set osd_ah_pos = 0
+set osd_ah_sbar_pos = 0
+set osd_altitude_pos = 0
+set osd_avg_cell_voltage_pos = 0
+set osd_battery_usage_pos = 0
+set osd_compass_bar_pos = 0
+set osd_core_temp_pos = 0
+set osd_craft_name_pos = 0
+set osd_current_pos = 0
+set osd_disarmed_pos = 0
+set osd_esc_rpm_pos = 0
+set osd_esc_tmp_pos = 0
+set osd_flight_dist_pos = 0
+set osd_flip_arrow_pos = 0
+set osd_flymode_pos = 0
+set osd_g_force_pos = 0
+set osd_gps_lat_pos = 0
+set osd_gps_lon_pos = 0
+set osd_gps_sats_pos = 0
+set osd_gps_speed_pos = 0
+set osd_home_dir_pos = 0
+set osd_home_dist_pos = 0
+set osd_link_quality_pos = 0
+set osd_link_tx_power_pos = 0
+set osd_mah_drawn_pos = 0
+set osd_pidrate_profile_pos = 0
+set osd_pit_ang_pos = 0
+set osd_power_pos = 0
+set osd_rate_profile_name_pos = 0
+set osd_remaining_time_estimate_pos = 0
+set osd_rol_ang_pos = 0
+set osd_rsnr_pos = 0
+set osd_rssi_dbm_pos = 0
+set osd_rssi_pos = 0
+set osd_sys_lq_pos = 0
+set osd_sys_vtx_temp_pos = 0
+set osd_throttle_pos = 0
+set osd_tim_1_pos = 0
+set osd_tim_2_pos = 0
+set osd_vbat_pos = 0
+set osd_vtx_channel_pos = 0
+set osd_warnings_pos = 0
+set osd_link_quality_pos = 14336
+set osd_rssi_dbm_pos = 14368
+set osd_rsnr_pos = 14400
+set osd_g_force_pos = 15920
+set osd_throttle_pos = 15887
+set osd_current_pos = 14912
+set osd_mah_drawn_pos = 14944
+set osd_gps_speed_pos = 14388
+set osd_gps_lon_pos = 14973
+set osd_gps_lat_pos = 14952
+set osd_gps_sats_pos = 14432
+set osd_home_dir_pos = 14394
+set osd_home_dist_pos = 14397
+set osd_compass_bar_pos = 14358
+set osd_altitude_pos = 30807
+set osd_avg_cell_voltage_pos = 14880
+set osd_disarmed_pos = 14646
+set osd_flip_arrow_pos = 14682
+set osd_core_temp_pos = 15376
+set osd_rate_profile_name_pos = 14965
+set osd_displayport_device = MSP
+set vcd_video_system = HD
+set osd_canvas_width = 53
+set osd_canvas_height = 20
+set osd_warnings_pos = 14677
+#$ OPTION BEGIN (CHECKED): Single-cell battery reporting
+    set report_cell_voltage = ON
+#$ OPTION END
+set osd_gps_sats_pos = 0
+set osd_gps_speed_pos = 0
+set osd_home_dir_pos = 0
+set osd_home_dist_pos = 0
+set osd_gps_lat_pos = 0
+set osd_gps_lon_pos = 0
+set osd_compass_bar_pos = 0
+set osd_altitude_pos = 0
+set osd_flight_dist_pos = 0
+set osd_gps_sats_show_pdop = OFF
+#$ OPTION BEGIN (CHECKED): More GPS details
+    set osd_gps_speed_pos = 14388
+    set osd_gps_lon_pos = 14973
+    set osd_gps_lat_pos = 14952
+    set osd_home_dir_pos = 14394
+    set osd_home_dist_pos = 14397
+    set osd_compass_bar_pos = 14358
+    set osd_altitude_pos = 30807
+    set osd_gps_sats_show_pdop = ON
+#$ OPTION END
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) GPS display - choose exactly one
+    #$ OPTION BEGIN (CHECKED): Non-GPS drone
+        set osd_gps_sats_pos = 0
+        set osd_gps_speed_pos = 0
+        set osd_home_dir_pos = 0
+        set osd_home_dist_pos = 0
+        set osd_gps_lat_pos = 0
+        set osd_gps_lon_pos = 0
+        set osd_compass_bar_pos = 0
+        set osd_altitude_pos = 0
+        set osd_flight_dist_pos = 0
+        set osd_gps_sats_show_pdop = OFF
+    #$ OPTION END
+    #$ OPTION BEGIN (UNCHECKED): GPS-equipped drone
+        set osd_gps_sats_pos = 14432
+    #$ OPTION END
+#$ OPTION_GROUP END
+#$ OPTION BEGIN (UNCHECKED): Imperial units (feet and mph)
+    set osd_units = IMPERIAL
+#$ OPTION END
+set osd_current_pos = 0
+set osd_mah_drawn_pos = 0
+#$ OPTION BEGIN (UNCHECKED): Current and mAh reporting (requires calibrated current sensor)
+    set osd_current_pos = 14912
+    set osd_mah_drawn_pos = 14944
+#$ OPTION END
